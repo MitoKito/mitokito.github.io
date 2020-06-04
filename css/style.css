@@ -301,7 +301,6 @@ footer {
 
 .overlay-image {
   position: absolute;
-  height: 80vh;
   left: 50%;
   margin: 50vh auto 0;
   transform: translateY(-50%) translateX(-50%);
