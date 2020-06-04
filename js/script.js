@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   const overlay = document.querySelector('.overlay');
   const overlayImage = document.querySelector('.overlay-image');
+  const body = document.querySelector('body');
 
   document
     .querySelectorAll('.card-image-inner')
@@ -10,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         overlayImage.setAttribute('src', imageSrc);
         overlay.classList.replace('d-none', 'd-block');
         overlay.classList.replace('invisible', 'visible');
+        body.classList.add('no-scroll')
       });
     });
 
@@ -19,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
       el.addEventListener('click', function () {
         overlay.classList.replace('d-block', 'd-none');
         overlay.classList.replace('visible', 'invisible');
+        body.classList.remove('no-scroll')
       });
     });
 });
